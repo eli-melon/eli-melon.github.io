@@ -12,6 +12,6 @@ A place to include any other types of information that you'd like to include abo
 
 ### Contact me
 
-![Image Description](/images/13.jpg){:#main-image}
+![Image Description](/images/13.jpeg){:#main-image}
 
 [email@domain.com](mailto:email@domain.com)
