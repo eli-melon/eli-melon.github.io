@@ -15,7 +15,7 @@ permalink: /photo/
   {% for post in site.fcols %}
   <a href="{{ site.baseurl }}{{ post.url }}">
     <div class="column" style="padding-bottom: 30px;">
-      <img src="{{ post.cover }}" style="width: 100%; height: 100%;">
+      <img src="{{ post.cover }}" style="width: 100%; height: 100%; object-fit: cover;">
       <div style="text-align: center; padding-top: 10px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; font-size: 26px; font-weight: bold;">{{ post.title }}</div>
     </div>
     </a>
