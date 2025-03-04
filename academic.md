@@ -8,10 +8,10 @@ permalink: /academic/
 
 # Education {:.heading1}
 
-{:.subheading}
 Lincoln Academy 2021-2025
 {:.subheading}
 Williams College 2025-2029   Double Major in Physics and Philosophy
+{:.subheading}
 
 # Research {:.heading1}
 
