@@ -1,0 +1,21 @@
+---
+layout: page
+title: Film & Photo
+permalink: /photo/
+---
+<img src="/images/10-22-24_0069.jpg" id="main-image">
+<br/>
+<br/>
+<br/>
+<header style="font-family: Playfair Display; font-size: 68px; font-weight: bold; color: #2B1C10; text-align: center">Collections</header>
+<br/>
+<br/>
+<br/>
+<div  style="padding-left: 5vw; padding-right: 5vw;">
+  {% for post in site.fcols %}
+    <div class="column">
+      <img src="{{ post.cover }}" style="width: 100%;">
+      <div style="text-align: center; padding-top: 10px; font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic; font-size: 26px; font-weight: bold;">{{ post.title }}</div>
+    </div>
+  {% endfor %}
+</div>
