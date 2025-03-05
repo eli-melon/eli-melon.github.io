@@ -12,7 +12,15 @@ layout: page
 </div>
 
 <script>
-      var data = '{{ site.baseurl}}/search.json';
+      var json_file = '{{ site.baseurl}}/search.json';
+      var data;
+
+      author = 'Eli Melanson';
+
+      if (author) {
+            data = json_file.filter(post => post.author = author);
+      }
+      
       
   window.simpleJekyllSearch = new SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
