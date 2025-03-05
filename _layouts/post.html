@@ -49,11 +49,15 @@ color: #2B1C10;">{{ page.title }}</h1>
 <script defer src="https://cusdis.com/js/cusdis.es.js"></script>
 <script>
     window.addEventListener('load', function () {
-            setTimeout(() => {
-                let scrollHeight = document.querySelector("#cusdis_id_here iframe").contentWindow.document.body.scrollHeight;
-                document.querySelector("#cusdis_id_here iframe").style.height = scrollHeight + "px";
-            }, 3000);
+    let iframe = document.querySelector("#cusdis_thread iframe");
+    if (iframe) {
+        let observer = new MutationObserver(() => {
+            let scrollHeight = iframe.contentWindow.document.body.scrollHeight;
+            iframe.style.height = scrollHeight + "px";
         });
+        observer.observe(iframe.contentWindow.document.body, { childList: true, subtree: true });
+    }
+});
 </script>
     
 </article>
