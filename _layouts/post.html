@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<img src="/images/{{ page.cover }}" style="width:100vw;height:50vh;">
+<img src="/images/{{ page.cover }}" style="width:100vw;height:50vh;object-fit: cover;">
 
 <article class="post" style="padding: 5vw;">
 
@@ -43,6 +43,7 @@ color: #2B1C10;">{{ page.title }}</h1>
   data-page-id="{{ page.id }}"
   data-page-url="{{ site.url }}{{ page.baseurl }}{{ page.url }}"
   data-page-title="{{ page.title }}"
+      style="margin-left:160px; padding-right:160px; font-family: Georgia, Times, 'Times New Roman', serif;"
 ></div>
 <script defer src="https://cusdis.com/js/cusdis.es.js"></script>
     
