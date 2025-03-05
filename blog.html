@@ -10,7 +10,7 @@ permalink: /blog/
     <article class="post" style="padding-left: 10vw; padding-right: 10vw;">
 
       <h1><a href="{{ site.baseurl }}{{ post.url }}" class="title">{{ post.title }}</a></h1>
-
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">{{ post.tag }}</a>&nbsp;&nbsp;{{ post.date | date: "%B %e, %Y" }}&nbsp;&nbsp;<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">{{ post.author }}</a>
       <div class="entry">
         {{ post.excerpt }}
       </div>
