@@ -7,6 +7,7 @@ permalink: /search/
       <input type="search" id="search-input" placeholder="search...">
       Author: <select id="author">{% for author in site.authors %}<option value="{{ author.name }}">{{ author.name }}</option>{% endfor %}</select>
       Type: <select id="tag">{% for tag in site.tags %}<option value="{{ tag[0] }}">{{ tag[0] }}</option>{% endfor %}</select>
+      <button onclick="sjs()">Search</button>
       <ul id="results-container"></ul>
 </div>
 <!-- or without installing anything -->
@@ -33,8 +34,9 @@ permalink: /search/
             return data.filter(d => d.tag === $('#tag').val());
             console.log(data);
       }
-      
-  window.simpleJekyllSearch = new SimpleJekyllSearch({
+
+      function sjs() {
+  var sjs = SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         json: filterJSON(),
@@ -42,9 +44,5 @@ permalink: /search/
         noResultsText: 'No results found',
         limit: 10,
         fuzzy: false
-      })
-
-      setTimeout(() => {
-  window.simpleJekyllSearch.search('t')
-}, 500)
+      })}
 </script>
