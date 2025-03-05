@@ -2,7 +2,7 @@
 layout: post
 title: The Brutalist - A Realist Destruction of the American Dream
 permalink: /blog/:title/
-tag: cinema
+tag: cinematic review
 author: Eli Melanson
 ---
 
