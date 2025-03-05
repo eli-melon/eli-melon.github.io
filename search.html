@@ -5,6 +5,8 @@ permalink: /search/
 <div style="min-height: 55vh;">
 <div id="search-demo-container">
       <input type="search" id="search-input" placeholder="search...">
+      Author: <select id="author">{% for author in site.authors %}<option id="{{ author.name }}">{{ author.name }}</option>{% endfor %}</select>
+      Type: <select id="tag">{% for tag in site.tags %}<option id="{{ tag[0] }}">{{ tag[0] }}</option>{% endfor %}</select>
       <ul id="results-container"></ul>
 </div>
 <!-- or without installing anything -->
@@ -25,12 +27,14 @@ permalink: /search/
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
-      var author = 'Eli Melanson';
+      var author = document.getElementById('author');
+      var tag = document.getElementById('tag');
 
       var yes = true;
 
       function filterJSON() {
-            return json_file.filter(d => d.author === author);
+            var data = json_file.filter(d => d.author === author.value);
+            return data.filter(d => d.tag === tag.value);
       }
       
       //var data = json_file.filter(d => d.author === 'Eli Melanson');
