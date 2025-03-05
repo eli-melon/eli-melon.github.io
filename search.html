@@ -30,7 +30,7 @@ permalink: /search/
       var yes = true;
 
       function filterJSON() {
-            return json_file;
+            return json_file.filter(d => d.author === author);
       }
       
       //var data = json_file.filter(d => d.author === 'Eli Melanson');
