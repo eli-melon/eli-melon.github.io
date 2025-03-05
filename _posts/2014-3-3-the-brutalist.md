@@ -1,6 +1,9 @@
 ---
 layout: post
-title: You're up and running!
+title: The Brutalist - A Realist Destruction of the American Dream
+permalink: /blog/:title/
+tag: cinema
+author: Eli Melanson
 ---
 
 Lorem ipsum odor amet, consectetuer adipiscing elit. Nullam pretium leo sem erat bibendum. Fermentum porttitor vel libero dignissim semper purus maecenas. Venenatis ultricies aliquet sodales ultrices rutrum ultricies convallis finibus. Taciti congue a sagittis facilisi scelerisque orci turpis? Rutrum posuere blandit integer, at tincidunt sagittis justo orci. Mauris consequat aliquam congue laoreet habitasse proin pretium nibh? Sociosqu dignissim tellus taciti ligula interdum. Pulvinar conubia sit conubia ad nascetur maximus. Bibendum mi faucibus sit efficitur litora magnis et rhoncus rutrum.
