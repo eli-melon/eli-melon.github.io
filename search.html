@@ -27,17 +27,11 @@ permalink: /search/
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
-      var author = document.getElementById('author');
-      var tag = document.getElementById('tag');
-
-      var yes = true;
-
-      function filterJSON() {
-            var data = json_file.filter(d => d.author === author.value);
-            return data.filter(d => d.tag === tag.value);
-      }
       
-      //var data = json_file.filter(d => d.author === 'Eli Melanson');
+      function filterJSON() {
+            var data = json_file.filter(d => d.author === document.getElementById('author').value);
+            return data.filter(d => d.tag === document.getElementById('tag').value);
+      }
       
   window.simpleJekyllSearch = new SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
