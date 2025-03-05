@@ -28,7 +28,7 @@ color: #2B1C10;">{{ page.title }}</h1>
       <hr style="border-top: 1px solid #2B1C10; border-bottom: 0px; border-left: 0px; border-right: 0px;">
     <div>Written by {{ page.author }}</div>
       <hr style="border-top: 1px solid #2B1C10; border-bottom: 0px; border-left: 0px; border-right: 0px;">
-    <div>Leave a comment</div>
+    <div><a href="#cusdis_thread" style="color: #2B1C10;">Leave a comment</a></div>
       <hr style="border-top: 1px solid #2B1C10; border-bottom: 0px; border-left: 0px; border-right: 0px;">
   </div>
   
@@ -47,5 +47,13 @@ color: #2B1C10;">{{ page.title }}</h1>
       style="margin-left:160px; padding-right:160px; font-family: Georgia, Times, 'Times New Roman', serif; height: 100%;"
 ></div>
 <script defer src="https://cusdis.com/js/cusdis.es.js"></script>
+<script>
+    window.addEventListener('load', function () {
+            setTimeout(() => {
+                let scrollHeight = document.querySelector("#cusdis_id_here iframe").contentWindow.document.body.scrollHeight;
+                document.querySelector("#cusdis_id_here iframe").style.height = scrollHeight + "px";
+            }, 3000);
+        });
+</script>
     
 </article>
