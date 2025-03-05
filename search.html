@@ -29,8 +29,8 @@ permalink: /search/
 ]
       
       function filterJSON() {
-            var data = json_file.filter(d => d.author === $('#author').val().trigger('change'));
-            return data.filter(d => d.tag === $('#tag').val().trigger('change'));
+            var data = json_file.filter(d => d.author === $('#author').val.trigger('change'));
+            return data.filter(d => d.tag === $('#tag').val.trigger('change'));
             console.log(data);
       }
       
