@@ -5,7 +5,7 @@ permalink: /search/
 <div style="min-height: 55vh;">
 <div id="search-demo-container">
       <input type="search" id="search-input" placeholder="search...">
-      Author: <select id="author">{% for author in site.authors %}<option id="{{ author.name }}">{{ author.name }}</option>{% endfor %}</select>
+      Author: <select id="tag">{% for author in site.authors %}<option id="{{ author.name }}">{{ author.name }}</option>{% endfor %}</select>
       Type: <select id="tag">{% for tag in site.tags %}<option id="{{ tag[0] }}">{{ tag[0] }}</option>{% endfor %}</select>
       <ul id="results-container"></ul>
 </div>
