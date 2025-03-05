@@ -32,7 +32,6 @@ permalink: /search/
       function filterJSON() {
             var data = json_file.filter(d => d.author === $('#author').val());
             return data.filter(d => d.tag === $('#tag').val());
-            console.log(data);
       }
 
       function sjs() {
@@ -45,4 +44,6 @@ permalink: /search/
         limit: 10,
         fuzzy: false
       })}
+
+      sjs.search($('#search-input).val());
 </script>
