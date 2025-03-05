@@ -1,0 +1,18 @@
+---
+layout: none
+---
+{% for author in site.authors %} 
+"{{ author.name }}":[
+  {% for post in site.posts %}
+    {% if post.author = author %}
+      {
+        "title"    : "{{ post.title | escape }}",
+        "tag"     : "{{ post.tag }}",
+        "url"      : "{{ site.baseurl }}{{ post.url }}",
+        "date"     : "{{ post.date | date: "%B %e, %Y" }}",
+        "author"   : "{{ post.author }}"
+      } {% unless forloop.last %},{% endunless %}
+    {% endif %}
+  {% endfor %}
+]
+{% endfor %}
