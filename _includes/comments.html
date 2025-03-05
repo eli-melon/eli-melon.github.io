@@ -1,0 +1,78 @@
+<h3>Leave a comment</h3>
+
+<form id="comment">
+  <label for="message">Message</label>
+  <textarea id="message"></textarea>
+
+  <label for="name">Name</label>
+  <input type="text" id="name">
+
+  <label for="email">Email</label>
+  <input type="text" id="email">
+
+  <input type="submit" value="Post Comment">
+</form>
+
+<div id="comments-container"></div>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAEbTLeK2WzcbQlkvJ5K7UOZcmUKdT7aMQ",
+    authDomain: "elimelanson-blog-comments.firebaseapp.com",
+    projectId: "elimelanson-blog-comments",
+    storageBucket: "elimelanson-blog-comments.firebasestorage.app",
+    messagingSenderId: "1048401149553",
+    appId: "1:1048401149553:web:021e48440659701256e5d0",
+    measurementId: "G-7SY4ZF347Y"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+  var rootRef = firebase.database().ref();
+  var postComments = rootRef.child('postComments');
+
+  var link = $("link[rel='canonical']").attr("href");
+var pathkey = decodeURI(link.replace(new RegExp('\\/|\\.', 'g'),"_"));
+var postRef = postComments.child(pathkey);
+
+  $("#comment").submit(function() {
+    postRef.push().set({
+        name: $("#name").val(),
+        message: $("#message").val(),
+        md5Email: md5($("#email").val()),
+        postedAt: firebase.database.ServerValue.TIMESTAMP
+  });
+
+  $("input[type=text], textarea").val("");
+
+  return false;
+});
+
+  postRef.on("child_added", function(snapshot) {
+    var newComment = snapshot.val();
+    
+    // Markdown into HTML
+    var converter = new showdown.Converter();
+    converter.setFlavor('github');
+    var markedMessage = converter.makeHtml(newComment.message);
+    
+    // HTML format
+    var html = "<div class='comment'>";
+    html += "<h4>" + newComment.name + "</h4>";
+    html += "<div class='profile-image'><img src='https://www.gravatar.com/avatar/" + newComment.md5Email + "?s=100&d=retro'/></div>";
+    html += "<span class='date'>" + jQuery.timeago(newComment.postedAt) + "</span>"
+    html += "<p>" + markedMessage  + "</p></div>";
+    
+    $("#comments-container").prepend(html);
+});
+</script>
