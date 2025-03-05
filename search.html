@@ -14,19 +14,13 @@ permalink: /search/
 
 <script>
       var json_file = '{{ site.baseurl}}/search.json';
-      var data;
-
       var author = 'Eli Melanson';
-
-      if (author) {
-            data = json_file.filter(post => post.author = author);
-      }
       
       
   window.simpleJekyllSearch = new SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
-        json: data,
+        json: json_file.filter(post => post.author = author),
         searchResultTemplate: '<article class="post" style="padding-left: 10vw; padding-right: 10vw;"><h1><a class="title" href="{url}?query={query}" title="{desc}">{title}</a></h1><span class="read-more">{tag}</span>&nbsp;&nbsp;<span class="read-more">{date}</span>&nbsp;&nbsp;<span class="read-more">{author}</span></article>',
         noResultsText: 'No results found',
         limit: 10,
