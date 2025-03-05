@@ -29,7 +29,7 @@ permalink: /search/
 ]
       
       function filterJSON() {
-            var data = json_file.filter(d => d.author === document.getElementById('author').value);
+            var data = json_file.filter(d => d.author === $('#author').val.trigger('change');
             return data.filter(d => d.tag === document.getElementById('tag').value);
       }
       
