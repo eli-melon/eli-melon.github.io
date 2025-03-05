@@ -27,12 +27,18 @@ permalink: /search/
 ]
       var author = 'Eli Melanson';
 
+      var yes = true;
+
+      function filterJSON() {
+            return json_file;
+      }
+      
       //var data = json_file.filter(d => d.author === 'Eli Melanson');
       
   window.simpleJekyllSearch = new SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
-        json: json_file,
+        json: filterJSON(),
         searchResultTemplate: '<article class="post" style="padding-left: 10vw; padding-right: 10vw;"><h1><a class="title" href="{url}?query={query}" title="{desc}">{title}</a></h1><span class="read-more">{tag}</span>&nbsp;&nbsp;<span class="read-more">{date}</span>&nbsp;&nbsp;<span class="read-more">{author}</span></article>',
         noResultsText: 'No results found',
         limit: 10,
