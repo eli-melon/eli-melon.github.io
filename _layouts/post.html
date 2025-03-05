@@ -5,7 +5,7 @@ layout: default
 <article class="post" style="padding: 5vw;">
 
     <div style="font-family: Lato, sans-serif; font-size: 14px; font-style: normal; font-weight: bold; letter-spacing: 1px; line-height: 17px; text-transform: uppercase; color: #2B1C10; opactiy: 60%;">
-    Written on {{ page.date | date: "%B %e, %Y" }}
+    <a href="{{ site.baseurl }}">home</a>&nbsp;/&nbsp;<a href="{{ site.baseurl }}/blog">blog</a>
   </div>
 
   
@@ -18,13 +18,14 @@ line-height: 68px;
 text-transform: none;
 color: #2B1C10;">{{ page.title }}</h1>
 
-  <div style="font-family: Lato, sans-serif; font-size: 9px; font-style: normal; font-weight: normal; letter-spacing: 1px; line-height: 12px; text-transform: uppercase; color: #2B1C10; opactiy: 60%;">
+  <div style="width: 150px; font-family: Lato, sans-serif; font-size: 9px; font-style: normal; font-weight: normal; letter-spacing: 1px; line-height: 12px; text-transform: uppercase; color: #2B1C10; opactiy: 60%;">
+    <div>{{ page.tag }}</div>
     <div>{{ page.date | date: "%B %e, %Y" }}</div>
     <div>Written by {{ page.author }}</div>
     <div>Leave a comment</div>
   </div>
   
-  <div class="entry" style="font-family: Georgia, Times, 'Times New Roman', serif; font-size: 18px; font-style: normal; font-weight: normal; letter-spacing: normal; line-height: 26px; text-transform: none; color: #2B1C10">
+  <div class="entry" style="margin-left: 150px; font-family: Georgia, Times, 'Times New Roman', serif; font-size: 18px; font-style: normal; font-weight: normal; letter-spacing: normal; line-height: 26px; text-transform: none; color: #2B1C10">
     {{ page.content | remove: page.excerpt }}
   </div>
 
