@@ -4,6 +4,7 @@ title: The Brutalist - A Realist Destruction of the American Dream
 permalink: /blog/:title/
 tag: cinematic review
 author: Eli Melanson
+cover: the-brutalist.png
 ---
 
 A deep dive into the slow, methodical storytelling of Brady Corbet
