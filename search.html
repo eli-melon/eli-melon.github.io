@@ -31,6 +31,14 @@ permalink: /search/
       $("#search-input").on("input", function() {
          sjs('anora');
 });
+
+      $("#author").change(function () {
+        sjs('t');
+    });
+
+      $("#tag").change(function () {
+        sjs('t');
+    });
       
       function filterJSON() {
             var data = json_file.filter(d => d.author === $('#author').val());
