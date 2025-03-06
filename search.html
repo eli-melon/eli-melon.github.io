@@ -82,5 +82,8 @@ permalink: /search/
             urlParams.set("search", $("#search-input").val());
             urlParams.set("author", $('#author').val());
             urlParams.set("tag", $('#tag').val());
+            const path = window.location.href.split('?')[0];
+            const newURL = `${path}?${urlParams}`;
+            history.pushState({}, '', newURL);
                    }
 </script>
