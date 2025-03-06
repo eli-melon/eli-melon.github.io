@@ -15,7 +15,28 @@ permalink: /search/
 </div>
 
 <script>
-      //var json_file = '{{ site.baseurl}}/search.json';
+      var queryParams = new URLSearchParams(window.location.search);
+
+      $(document).ready(function() {
+            const search = urlParams.get('search');
+            const author = urlParams.get('author');
+            const tag = urlParams.get('tag');
+
+            if (search) {
+                  $("#search-input").val(search);
+                  sjs($("#search-input").val());
+            }
+
+            if (author) {
+                  $("#author").val(author.replace(/-/g, ' '););
+                  sjs($("#search-input").val());
+            }
+
+            if (tag) {
+                  $("#tag").val(tag.replace(/-/g, ' '););
+                  sjs($("#search-input").val());
+            }
+      });
       var json_file = [
   {% for post in site.posts %}
     {
