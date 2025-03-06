@@ -28,11 +28,9 @@ permalink: /search/
   {% endfor %}
 ]
 
-      /*$("#search=input").on("input", function() {
+      $("#search-input").on("input", function() {
          sjs('anora');
-});*/
-
-sjs('the');
+});
       
       function filterJSON() {
             var data = json_file.filter(d => d.author === $('#author').val());
