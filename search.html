@@ -29,15 +29,15 @@ permalink: /search/
 ]
 
       $("#search-input").on("input", function() {
-         sjs('anora');
+         sjs($("#search-input").val());
 });
 
       $("#author").change(function () {
-        sjs('t');
+        sjs($("#search-input").val());
     });
 
       $("#tag").change(function () {
-        sjs('t');
+        sjs($("#search-input").val());
     });
       
       function filterJSON() {
