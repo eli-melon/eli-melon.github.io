@@ -51,17 +51,14 @@ permalink: /search/
 
       $("#search-input").on("input", function() {
          sjs($("#search-input").val());
-         urlParams.set("search", $("#search-input").val());
 });
 
       $("#author").change(function () {
         sjs($("#search-input").val());
-        urlParams.set("author", $("#author").val());
     });
 
       $("#tag").change(function () {
         sjs($("#search-input").val());
-        urlParams.set("tag", $("#tag").val());
     });
       
       function filterJSON() {
