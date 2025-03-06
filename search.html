@@ -4,10 +4,9 @@ permalink: /search/
 ---
 <div style="min-height: 55vh;">
 <div id="search-demo-container">
-      <input type="search" id="search-input" placeholder="search...">
+      <input type="text" id="search-input" placeholder="search...">
       Author: <select id="author">{% for author in site.authors %}<option value="{{ author.name }}">{{ author.name }}</option>{% endfor %}</select>
       Type: <select id="tag">{% for tag in site.tags %}<option value="{{ tag[0] }}">{{ tag[0] }}</option>{% endfor %}</select>
-      <button onclick="sjs()">Search</button>
       <ul id="results-container"></ul>
 </div>
 <!-- or without installing anything -->
@@ -28,13 +27,17 @@ permalink: /search/
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
+
+      $("#search=input").on("input", function() {
+         sjs('anora');
+});
       
       function filterJSON() {
             var data = json_file.filter(d => d.author === $('#author').val());
             return data.filter(d => d.tag === $('#tag').val());
       }
 
-      function sjs() {
+      function sjs(searchQuery) {
   var sjs = SimpleJekyllSearch({
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
@@ -45,6 +48,6 @@ permalink: /search/
         fuzzy: false
       })
 
-      sjs.search('bru');
+      sjs.search(searchQuery);
                    }
 </script>
