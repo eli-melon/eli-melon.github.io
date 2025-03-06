@@ -64,9 +64,15 @@ permalink: /search/
         urlParams.set("tag", $("#tag").val());
     });
       
-      function filterJSON() {
-            var data = json_file.filter(d => d.author === $('#author').val());
-            return data.filter(d => d.tag === $('#tag').val());
+      function filterJSON($('#author').val()) {
+            var data = json_file
+            if ($('#author').val()) {
+                  data.filter(d => d.author === $('#author').val());
+            }
+            if ($('#tag').val() {
+                  data.filter(d => d.tag === $('#tag').val());
+            }
+            return data;
       }
 
       function sjs(searchQuery) {
