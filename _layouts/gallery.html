@@ -72,67 +72,16 @@ body {
   overflow-x: hidden;
   margin:0;
 }
-
-      #main-image {
-        height:90vh;
-        padding: inherit;
-        margin:auto;
-        display: block;
-        padding-top:10px;
-      }
-
-      .heading1 {
-        font-family: Playfair Display;
-        font-size: 68px;
-        font-weight: bold;
-        color: #2B1C10;
-      }
-
-      .subheading {
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        padding-left: 10px;
-        padding-right: 10px;
-        color: #2B1C10;
-      }
-
-      .title {
-        font-family: Playfair Display;
-        font-size: 32px;
-        font-weight: bold;
-        color: #2B1C10;
-      }
-
-      .entry {
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        padding-left: 10px;
-        padding-right: 10px;
-        color: #2B1C10;
-      }
-
-      .read-more {
-        font-family: Lato, sans-serif;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: bold;
-        letter-spacing: 1px;
-        line-height: 17px;
-        text-transform: uppercase;
-        color: #2B1C10;
-      }
-
-      .row {
-  display: flex;
-}
-
-.column {
-  width: 40vw;
-  height: 35vh;
-  padding: 5px;
-  display: inline-block;
-}
     </style>
 
-<h1>{{ page.title }}</h1>
+<h1 style="font-family: 'Playfair Display', serif;
+font-size: 68px;
+font-style: italic;
+font-weight: bold;
+letter-spacing: normal;
+line-height: 68px;
+text-transform: none;
+color: #2B1C10;">{{ page.title }}</h1>
 
 {{ content }}
 
