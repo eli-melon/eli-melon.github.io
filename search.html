@@ -3,10 +3,10 @@ layout: page
 permalink: /search/
 ---
 <div style="min-height: 55vh;">
-<div id="search-demo-container">
-      <input type="text" id="search-input" placeholder="search...">
-      Author: <select id="author">{% for author in site.authors %}<option value="{{ author.name }}">{{ author.name }}</option>{% endfor %}</select>
-      Type: <select id="tag">{% for tag in site.tags %}<option value="{{ tag[0] }}">{{ tag[0] }}</option>{% endfor %}</select>
+<div id="search-demo-container" style="margin-left: auto; margin-right: auto;">
+      <input type="text" id="search-input" placeholder="search..." style="border-radius: 0px; color: #2B1C10; background-color: #E1D4C1; border: 2px solid #2B1C10; padding: 8px 12px; height: 30px; width: 100px;">
+      Author: <select id="author" style="border: none; background-color: #E1D4C1; border: 2px solid #2B1C10; padding: 8px 12px;">{% for author in site.authors %}<option value="{{ author.name }}">{{ author.name }}</option>{% endfor %}</select>
+      Type: <select id="tag" style="border: none; background-color: #E1D4C1; border: 2px solid #2B1C10; padding: 8px 12px;">{% for tag in site.tags %}<option value="{{ tag[0] }}">{{ tag[0] }}</option>{% endfor %}</select>
       <ul id="results-container"></ul>
 </div>
 <!-- or without installing anything -->
