@@ -14,8 +14,8 @@ support: [gallery]
     <div class="col col-md-10">
       <div class="gallery-container" id="animated-thumbnails-gallery">
         {% for photo in page.photos %}
-        <a class="gallery-item" data-src="/images/{{ page.base-file-name }}/{{ page.base-file-name }}-{{ photo }}" data-sub-html="<h4>{{ page.title }} - Eli Melanson</h4>">
-          <img class="img-responsive" src="/images/{{ page.base-file-name }}/{{ page.base-file-name }}-{{ photo }}" />
+        <a class="gallery-item" data-src="/images/{{ page.base-file-name }}/{{ page.base-file-name }}-{{ photo }}.{{ page.extension }}" data-sub-html="<h4>{{ page.title }} - Eli Melanson</h4>">
+          <img class="img-responsive" src="/images/{{ page.base-file-name }}/{{ page.base-file-name }}-{{ photo }}.{{ page.extension }}" />
         </a>
         {% endfor %}
       </div>
