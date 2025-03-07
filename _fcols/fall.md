@@ -3,7 +3,7 @@ title: Fall
 cover: /images/AMARA_0162.jpg
 layout: gallery
 base-file-name: fall
-photos: 16
+photos: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
 extension: png
 ---
 
