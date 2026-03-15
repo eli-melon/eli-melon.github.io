@@ -18,4 +18,7 @@ Williams College 2025-2029   Major in Physics
 {:.subheading}
 Ti:Sa Pulsed Laser Stabilization, CaH+ Level Probing - Quantum Simulation with Trapped Ions Lab, Doret Lab, Williams College 2025-current
 {:.subheading}
-  
+# Honors
+{:.heading1}
+United States Presidential Scholar Semifinalist (2025)     Williams College Summer Science Research Fellowship (2026)
+{:.subheading}
